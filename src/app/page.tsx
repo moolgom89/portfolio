@@ -6,17 +6,15 @@ export default function Home() {
       <Header />
       
       {/* Hero 섹션 */}
-      <section className="min-h-[85vh] relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+      <section className="min-h-[85vh] relative overflow-hidden bg-gradient-to-br from-green-50 via-white to-green-100 dark:from-green-900 dark:via-gray-800 dark:to-green-900">
         <div className="absolute inset-0 bg-grid-pattern opacity-[0.03] dark:opacity-[0.05]"></div>
         <div className="container mx-auto px-6 min-h-[85vh] flex items-center pb-8">
           <div className="max-w-4xl">
             <div className="space-y-6">
               <h2 className="text-lg font-medium text-primary dark:text-primary-light">Web Developer</h2>
               <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white leading-tight">
-                안녕하세요,<br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">
-                  김범수
-                </span>입니다
+                안녕하세요!<br />
+                프론트엔드 개발자입니다
               </h1>
               <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl leading-relaxed">
                 사용자 중심의 웹 개발을 추구하며, 최신 기술과 창의적인 문제 해결 능력으로
