@@ -1,103 +1,136 @@
-import Image from "next/image";
+import Header from '@/components/Header';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="min-h-screen">
+      <Header />
+      
+      {/* Hero 섹션 */}
+      <section className="min-h-[85vh] relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+        <div className="absolute inset-0 bg-grid-pattern opacity-[0.03] dark:opacity-[0.05]"></div>
+        <div className="container mx-auto px-6 min-h-[85vh] flex items-center pb-8">
+          <div className="max-w-4xl">
+            <div className="space-y-6">
+              <h2 className="text-lg font-medium text-primary dark:text-primary-light">Web Developer</h2>
+              <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white leading-tight">
+                안녕하세요,<br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">
+                  김범수
+                </span>입니다
+              </h1>
+              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl leading-relaxed">
+                사용자 중심의 웹 개발을 추구하며, 최신 기술과 창의적인 문제 해결 능력으로
+                효율적이고 확장 가능한 웹 애플리케이션을 구축합니다.
+              </p>
+              <div className="flex gap-6 pt-8">
+                <a 
+                  href="#portfolio" 
+                  className="px-8 py-4 bg-primary hover:bg-primary/90 text-white rounded-lg transition-all transform hover:translate-y-[-2px] hover:shadow-lg"
+                >
+                  포트폴리오 보기
+                </a>
+                <a 
+                  href="#contact" 
+                  className="px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg hover:border-primary hover:text-primary transition-all transform hover:translate-y-[-2px]"
+                >
+                  연락하기
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      {/* About 섹션 */}
+      <section id="about" className="py-12 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
+            Career Path
+          </h2>
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-12">
+              {[
+                {
+                  year: '2023',
+                  title: '프로젝트 A',
+                  description: '대규모 웹 애플리케이션 개발 및 배포'
+                },
+                {
+                  year: '2022',
+                  title: '프로젝트 B',
+                  description: '반응형 웹사이트 디자인 및 구현'
+                },
+                {
+                  year: '2021',
+                  title: '프로젝트 C',
+                  description: '사용자 경험 개선 프로젝트 진행'
+                }
+              ].map((item, index) => (
+                <div key={index} className="flex items-start gap-6 p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-lg transition-shadow">
+                  <div className="text-primary font-bold text-xl">{item.year}</div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{item.title}</h3>
+                    <p className="text-gray-600 dark:text-gray-300">{item.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Skills 섹션 */}
+      <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-800">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-16">
+            Technical Skills
+          </h2>
+          <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              'Next.js',
+              'React',
+              'TypeScript',
+              'Node.js',
+              'JavaScript',
+              'HTML/CSS',
+              'Git',
+              'AWS'
+            ].map((skill) => (
+              <div
+                key={skill}
+                className="p-6 bg-white dark:bg-gray-700 rounded-xl shadow-sm hover:shadow-md transition-shadow text-center"
+              >
+                <span className="text-gray-900 dark:text-white font-medium">{skill}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact 섹션 */}
+      <section id="contact" className="py-20 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-16">
+            Contact Me
+          </h2>
+          <div className="max-w-xl mx-auto text-center">
+            <div className="space-y-4 text-lg text-gray-600 dark:text-gray-300">
+              <p className="flex items-center justify-center gap-2">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                000-0000-0000
+              </p>
+              <p className="flex items-center justify-center gap-2">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                contact@mail.com
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
